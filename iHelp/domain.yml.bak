@@ -1,0 +1,56 @@
+slots:
+  person:
+    type: text
+
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - get_zoom
+  - get_junit
+  - get_premerge
+
+entities:
+  - person
+  
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+  
+  utter_zoom:
+  - text: "Zoom of "
+  
+  utter_junit:
+  - text: "junit command is, ant -Dtest.lrg=true -Dtest.project=FinFaMassTransactionsSharedProtectedModelTest -f $ADE_VIEW_ROOT/fusionapps/fin/build-payables.xml -Ddb.host=indl140129.in.oracle.com -Ddb.port=1522 -Ddb.sid=in140129 -Ddb.user=fusion -Ddb.pass=fusion test"
+   
+  utter_premerge:
+  - text: "premerge command is,$ADE_VIEW_ROOT/fatools/opensource/jauditFixScripts/FinPreMerge/bin/fin_premerge.ksh  -d fusion/fusion@slc12ile.us.oracle.com:1522/slc12ile  -DBreakOnError=0 -DrunSysInfoChecker=0"
+ 
+actions:
+  - zoom_link
+ 
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

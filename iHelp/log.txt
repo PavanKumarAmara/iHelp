@@ -1,0 +1,12 @@
+2020-04-25 22:28:58,722 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-04-25 22:29:21,966 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhook/'
+Traceback (most recent call last):
+  File "c:\program files\python37\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "c:\program files\python37\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "c:\program files\python37\lib\site-packages\sanic\router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /webhook/ not found
+2020-04-25 22:29:21,974 [ERROR]  Encountered an exception while running action 'zoom_link'. Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+2020-04-25 22:38:16,187 [INFO ]  Killing Sanic server now.
